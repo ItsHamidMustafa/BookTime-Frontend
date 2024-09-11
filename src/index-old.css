@@ -1,0 +1,842 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --primary: #1aac83;
+  --primary: #2b2b2b;
+  --primary-hover: #20b98e;
+  --error: #e7195a;
+  --danger: #ff4040;
+}
+
+@media only screen and (max-width: 1920px) {
+  * {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+
+  body {
+    background: #f1f1f1;
+    margin: 0;
+    font-family: 'Poppins';
+    height: 100%;
+    width: 100%;
+  }
+
+  header {
+    background: #ffffff;
+  }
+
+  header a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-container {
+    flex: 1;
+  }
+
+  .pages {
+    max-width: 1400px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 75%;
+    margin: auto;
+  }
+
+  .workouts {
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .books {
+    display: flex;
+    justify-content: center;
+    flex-basis: 200px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .books-search {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .margin-y-50-px {
+    margin: 50px 0px;
+  }
+
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  
+
+  .book {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 40px;
+    justify-content: space-between;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .book h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: var(--primary);
+  }
+
+  .book p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  .book-form {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .material-button {
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: #f1f1f1;
+    border-radius: 50%;
+    color: #333;
+    border: none;
+  }
+
+  .material-button:hover {
+    background: #121212;
+    color: #ffff;
+  }
+
+  .create {
+    margin-right: 100px;
+    width: 20%;
+  }
+
+  label,
+  input {
+    display: block;
+  }
+
+  input, textarea {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+
+  .input-90-width {
+    padding: 10px;
+    width: 90%;
+    border: none;
+    outline: none;
+  }
+
+  form button {
+    background: var(--primary);
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    font-family: 'Poppins';
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+  }
+
+  div.error {
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid var(--error);
+    color: var(--error);
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+
+  .success {
+    padding: 10px;
+    background: #effffb;
+    border: 1px solid var(--primary-hover);
+    color: var(--primary-hover);
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+
+  nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+
+  nav button {
+    background: #fff;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    font-size: 1em;
+  }
+
+  nav button:hover {
+    background: var(--danger);
+    color: #fff;
+  }
+
+  form.signup,
+  form.login {
+    max-width: 400px;
+    margin: 4px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+  }
+
+  .input-box {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid #adadad;
+    margin: 0px 0px 20px 0px;
+    padding: 2px;
+  }
+
+  .no-workouts {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    user-select: none;
+    text-align: center;
+    opacity: 0.4;
+  }
+
+  .no-workouts img {
+    width: 10vw;
+  }
+
+  .user-first-last-name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .user-first-last-name-container>* {
+    margin: 0px 3px 0px 3px;
+  }
+
+  .x-center {
+    margin: auto;
+  }
+
+  .x-end {
+    justify-content: end;
+  }
+
+  .d-flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d-flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .space-between {
+    justify-content: space-between;
+  }
+
+  .align-items-center {
+    align-items: center;
+  }
+
+  .justify-content-center {
+    justify-content: center;
+  }
+
+  .justify-content-sb {
+    justify-content: space-between;
+  }
+
+  .gap-10-px {
+    gap: 10px;
+  }
+
+  .gap-20-px {
+    gap: 20px;
+  }
+
+  .gap-2-percent {
+    gap: 2%;
+  }
+
+  .width-90p {
+    width: 90px;
+  }
+
+  .width-90-percent {
+    width: 90%;
+  }
+
+  .mt-20-px {
+    margin-top: 20px;
+  }
+
+  .xy-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .two-col-grid {
+    display: grid;
+    grid-template-columns: 49% 49%;
+  }
+
+  .seperator-line {
+    border: 1px solid #ffff;
+    height: 1px;
+    border-top-color: #d8d8d8;
+  }
+
+  .danger-button {
+    background: #f1f1f1;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+
+  .danger-button:hover {
+    background: var(--danger);
+    color: #fff;
+  }
+
+  .button-style {
+    background: transparent;
+    color: var(--primary);
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    border: 1px solid #121212;
+  }
+
+  .button-style:hover {
+    color: #ffff;
+    background: #121212;
+  }
+
+  .logout-user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user-avatar {
+    max-width: 50px;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+  }
+
+  .user-avatar-medium {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+  }
+
+  .dropdown-tray {
+    margin-top: 40px;
+    background: #fff;
+  }
+
+  .dropdown-tray-element {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .dropdown-tray-element:nth-child(1):hover {
+    background: #121212;
+    color: #fff;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+  }
+
+  .footer {
+    background: #ffffff;
+    color: var(--primary);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .footer div ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer div a {
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+  .test {
+    border: 1px solid red;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  header {
+    width: 100%;
+    position: static;
+  }
+
+  .main-container {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav button {
+    background: #fff;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .create {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 90%
+  }
+
+  .workouts {
+    margin: 0;
+  }
+
+  .book {
+    background: #fff;
+    border-radius: 3px;
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .book h2 {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+    color: var(--primary);
+  }
+
+  .book p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  .book span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #f1f1f1;
+    padding: 6px;
+    border-radius: 50%;
+    color: #333;
+  }
+
+  form button {
+    padding: 6px 10px;
+  }
+
+  form {
+    margin: 50px auto;
+    width: 80%;
+  }
+
+  form h3 {
+    font-size: 1em;
+  }
+
+  form label {
+    font-size: 0.8em;
+  }
+
+  form input {
+    padding: 5px;
+  }
+
+  form .input-box {
+    padding: 2px;
+  }
+
+  .login-signup-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8em;
+  }
+
+  .logout-user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-avatar {
+    max-width: 20px;
+  }
+
+  .logout-user-container span {
+    font-size: 0.8em;
+  }
+}
+
+.dropdown-tray {
+  position: absolute;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  padding: 10px;
+  top: 35px;
+  z-index: 1;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-trigger {
+  user-select: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+}
+
+.dropdown-trigger:hover .dropdown-tray {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.material-symbols-outlined {
+  user-select: none;
+  cursor: pointer;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 250,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+
+
+/* DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary: #2b2b2b;
+  --primary-hover: #20b98e;
+  --error: #e7195a;
+  --danger: #ff4040;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+header {
+  background: #ffffff;
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex: 1;
+}
+
+.pages {
+  max-width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin: auto;
+}
+
+.workouts {
+  width: 90%;
+  margin-left: 20px;
+}
+
+.books,
+.books-search {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+}
+
+.book {
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 30px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  margin: 10px;
+  flex: 0 1 100%;
+}
+
+.book h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.book p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+nav button {
+  background: #fff;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form {
+  width: 90%;
+  margin: 20px auto;
+}
+
+form button {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+footer {
+  background: #ffffff;
+  color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 425px) {
+  .home,
+  .book {
+    width: 90%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .book {
+    padding: 10px;
+  }
+
+  nav button {
+    padding: 3px 5px;
+    font-size: 12px;
+  }
+
+  .workouts,
+  .books,
+  .book {
+    margin: 0 auto;
+  }
+
+  footer {
+    padding: 5px;
+  }
+
+  .user-avatar {
+    max-width: 20px;
+  }
+
+  .dropdown-tray {
+  position: absolute;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  padding: 10px;
+  top: 35px;
+  z-index: 1;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-trigger {
+  user-select: none;
+}
+} */

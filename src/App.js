@@ -67,11 +67,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-// I GOT YOU MEANIE :)

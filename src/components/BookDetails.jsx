@@ -343,16 +343,18 @@ export const BookDetails = ({ book }) => {
               )}
               {(user && user.role === 1) && <span className="material-symbols-outlined d-flex-row material-button" onClick={handleDelete}>Delete</span>}
             </div>
-            <button className='primary-styled-button shop-now'>
-              Shop Now
-            </button>
-            {pdfFile && user.role === 1(
+            {(pdfFile && user && user.role === 1) ? (
               <button className='primary-styled-button'>
                 <Link to="/pdf-viewer" state={{ pdfUrl: pdfFile }}>
                   Read Book
                 </Link>
               </button>
-            )}
+            ) : (
+            <button className='primary-styled-button shop-now'>
+              Shop Now
+            </button>
+            )
+            }
           </div>
         )
       }

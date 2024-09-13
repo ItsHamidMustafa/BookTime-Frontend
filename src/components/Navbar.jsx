@@ -1,7 +1,8 @@
 import { React } from 'react'
 import { Link } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
-import { useAuthContext } from '../hooks/useAuthContext'
+import { useAuthContext } from '../hooks/useAuthContext';
+import btLogo from '../media/logo-full.png';
 
 
 export const Navbar = () => {
@@ -15,11 +16,11 @@ export const Navbar = () => {
     return (
         <header>
             <nav>
-                <Link to="/">
-                    <h1>
-                        BookTime Publication
-                    </h1>
-                </Link>
+                <div className='logo-container'>
+                    <Link to="/" className='logo-link'>
+                        <img src={btLogo} alt="BookTime" className='bt-logo-full' />
+                    </Link>
+                </div>
 
                 <div className='nav-center-options-container'>
                     <Link to='/' className='nav-center-option'>Home</Link>

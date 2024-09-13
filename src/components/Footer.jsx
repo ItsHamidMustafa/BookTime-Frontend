@@ -16,9 +16,9 @@ export const Footer = () => {
             <div className='footer-links-container'>
                 <h2>Social Links</h2>
                 <div className='social-links'>
-                    <span><a href='https://www.facebook.com/azinternationalpublisher' target='_blank' rel='noreferrer'><ion-icon name="logo-facebook"></ion-icon></a></span>
-                    <span><a href='https://www.instagram.com/azinternationalpublisher/' target='_blank' rel='noreferrer'><ion-icon name="logo-instagram"></ion-icon></a></span>
-                    <span><a href='https://twitter.com/' target='_blank' rel='noreferrer'><ion-icon name="logo-twitter"></ion-icon></a></span>
+                    <span><a href='https://www.facebook.com/Booktimepublication/' target='_blank' rel='noreferrer'><ion-icon name="logo-facebook"></ion-icon></a></span>
+                    <span><a href='https://www.instagram.com/booktimepublication/' target='_blank' rel='noreferrer'><ion-icon name="logo-instagram"></ion-icon></a></span>
+                    <span><a href='https://www.youtube.com/@BooktimePublication' target='_blank' rel='noreferrer'><ion-icon name="logo-youtube"></ion-icon></a></span>
                 </div>
             </div>
             <div className='address'>

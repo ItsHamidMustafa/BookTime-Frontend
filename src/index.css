@@ -8,6 +8,7 @@
     max-width: 100%;
     transition: all 0.3s ease;
     /* border: 1px solid red; */
+    /* border: 2px solid white; */
 }
 
 :root {
@@ -22,6 +23,10 @@
     --success-dark: #0c915e;
     --error-light: #ffefef;
     --error-dark: #ff0000;
+}
+
+.bt-logo-full {
+    max-width: 50%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -40,7 +45,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 14vh;
+        height: 10vh;
         background: var(--primary);
         position: sticky;
         top: 0;
@@ -50,15 +55,23 @@
 
     nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         width: 90%;
         color: var(--light);
     }
 
+    .bt-logo-full {
+        filter: drop-shadow(1px 1px 2px #fff);
+    }
+
+    nav div {
+        width: 30%;
+    }
+
     .nav-center-options-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         width: 40%;
     }
@@ -656,9 +669,6 @@
             'GRAD' 0,
             'opsz' 24
     }
-
-    ;
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -689,9 +699,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 10px;
         width: 90%;
         color: var(--light);
+        height: 100%;
     }
+
+    .logo-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bt-logo-full {
+        scale: 100%;
+        filter: drop-shadow(1px 1px 2px #fff);
+    }
+
 
     nav h1 {
         color: var(--light);
@@ -703,6 +727,12 @@
 
     .nav-center-option {
         display: none;
+    }
+
+    .nav-center-options-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     a {

@@ -130,14 +130,9 @@ const Home = () => {
 
   useEffect(() => {
 
-    const token = JSON.parse(localStorage.getItem('token'));
-
     const fetchBooks = async () => {
       const response = await fetch('/api/books/fetch-latest', {
         method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${token}`
-        },
       })
       const json = await response.json()
 

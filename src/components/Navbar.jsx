@@ -17,7 +17,7 @@ export const Navbar = () => {
             <nav>
                 <Link to="/">
                     <h1>
-                        BookTime
+                        BookTime Publication
                     </h1>
                 </Link>
 

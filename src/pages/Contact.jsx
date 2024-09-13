@@ -23,7 +23,7 @@ export const Contact = () => {
                         mail
                     </span>
                     <span>
-                        info@booktime.com.pk
+                        info@booktimepublication.com.pk
                     </span>
                 </div>
                 <div className='contact-item'>
@@ -31,7 +31,7 @@ export const Contact = () => {
                         call
                     </span>
                     <span>
-                        +92 300 0000000
+                        042-37163413
                     </span>
                 </div>
                 <div className='contact-item'>
@@ -39,7 +39,7 @@ export const Contact = () => {
                         location_on
                     </span>
                     <span>
-                        Somewhere in Lahore
+                        Shop #1, Al Noor Center 38 Ghazni Street, Urdu Bazar, Lahore
                     </span>
                 </div>
             </div>

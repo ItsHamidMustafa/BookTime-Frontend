@@ -389,6 +389,7 @@
         background: none;
         border: 1px solid var(--secondary);
     }
+
     .pdf-viewer {
         height: 90vh;
         width: 100%;
@@ -648,12 +649,15 @@
     }
 
     .material-symbols-outlined {
+        user-select: none;
         font-variation-settings:
             'FILL' 1,
             'wght' 200,
             'GRAD' 0,
             'opsz' 24
     }
+
+    ;
 
 }
 

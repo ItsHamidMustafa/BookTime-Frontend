@@ -10,8 +10,6 @@ export const useLogin = () => {
         setIsLoading(true)
         setError(null)
 
-        localStorage.removeItem('user');
-
         const response = await fetch('/api/user/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

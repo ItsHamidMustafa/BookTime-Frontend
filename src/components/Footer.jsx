@@ -16,9 +16,9 @@ export const Footer = () => {
             <div className='footer-links-container'>
                 <h2>Social Links</h2>
                 <div className='social-links'>
-                    <span><ion-icon name="logo-facebook"></ion-icon></span>
-                    <span><ion-icon name="logo-instagram"></ion-icon></span>
-                    <span><ion-icon name="logo-youtube"></ion-icon></span>
+                    <span><a href='https://www.facebook.com/azinternationalpublisher' target='_blank' rel='noreferrer'><ion-icon name="logo-facebook"></ion-icon></a></span>
+                    <span><a href='https://www.instagram.com/azinternationalpublisher/' target='_blank' rel='noreferrer'><ion-icon name="logo-instagram"></ion-icon></a></span>
+                    <span><a href='https://twitter.com/' target='_blank' rel='noreferrer'><ion-icon name="logo-twitter"></ion-icon></a></span>
                 </div>
             </div>
             <div className='address'>
@@ -27,7 +27,7 @@ export const Footer = () => {
                         mail
                     </span>
                     <span>
-                        info@booktime.com.pk
+                        info@booktimepublication.com.pk
                     </span>
                 </div>
                 <div className='footer-contact-item'>
@@ -35,7 +35,7 @@ export const Footer = () => {
                         call
                     </span>
                     <span>
-                        042-444444444
+                        042-37163413
                     </span>
                 </div>
                 <div className='footer-contact-item'>
@@ -43,7 +43,7 @@ export const Footer = () => {
                         location_on
                     </span>
                     <span>
-                        Somewhere in Lahore
+                        Shop #1, Al Noor Center 38 Ghazni Street, Urdu Bazar, Lahore
                     </span>
                 </div>
             </div>

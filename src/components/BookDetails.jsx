@@ -29,7 +29,7 @@ export const BookDetails = ({ book }) => {
 
 
     const fetchCover = async () => {
-      if (book.cover ) {
+      if (book.cover) {
         try {
           const response = await fetch(`/${book.cover}`, {
             method: 'GET',
@@ -76,7 +76,7 @@ export const BookDetails = ({ book }) => {
 
     fetchPdfFile();
     fetchCover();
-  }, [book.cover, book.pdfFile ]);
+  }, [book.cover, book.pdfFile]);
 
 
 
@@ -346,13 +346,13 @@ export const BookDetails = ({ book }) => {
             <button className='primary-styled-button shop-now'>
               Shop Now
             </button>
-            {pdfFile &&
+            {pdfFile && user.role === 1(
               <button className='primary-styled-button'>
                 <Link to="/pdf-viewer" state={{ pdfUrl: pdfFile }}>
                   Read Book
                 </Link>
               </button>
-            }
+            )}
           </div>
         )
       }

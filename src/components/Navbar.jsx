@@ -21,7 +21,6 @@ export const Navbar = () => {
                         <img src={btLogo} alt="BookTime" className='bt-logo-full' />
                     </Link>
                 </div>
-
                 <div className='nav-center-options-container'>
                     <Link to='/' className='nav-center-option'>Home</Link>
                     <Link to='/about' className='nav-center-option'>About</Link>

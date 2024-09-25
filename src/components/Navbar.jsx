@@ -1,4 +1,4 @@
-import { React } from 'react'
+import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext';
@@ -8,6 +8,11 @@ import btLogo from '../media/logo-full.png';
 export const Navbar = () => {
     const { logout } = useLogout();
     const { user } = useAuthContext();
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    }
 
     const handleLogoutClick = () => {
         logout();
@@ -16,12 +21,13 @@ export const Navbar = () => {
     return (
         <header>
             <nav>
-                <div className='logo-container'>
+                <span className='material-symbols-outlined menu-bars' onClick={toggleMenu}>Menu</span>
+                <div className={`logo-container ${menuOpen ? 'hidden' : ''}`}>
                     <Link to="/" className='logo-link'>
                         <img src={btLogo} alt="BookTime" className='bt-logo-full' />
                     </Link>
                 </div>
-                <div className='nav-center-options-container'>
+                <div className={`nav-center-options-container ${menuOpen ? 'active' : ''}`}>
                     <Link to='/' className='nav-center-option'>Home</Link>
                     <Link to='/about' className='nav-center-option'>About</Link>
                     {user && user.role === 1 && (
@@ -37,9 +43,8 @@ export const Navbar = () => {
                     <Link to='/contact' className='nav-center-option'>Contact</Link>
                 </div>
 
-
                 {user && (
-                    <div className='logout-user-container dropdown-trigger'>
+                    <div className={`logout-user-container dropdown-trigger ${menuOpen ? 'hidden' : ''}`}>
 
                         <div className='dropdown-tray'>
                             <Link to="/profile" className='dropdown-tray-element'>Profile</Link>

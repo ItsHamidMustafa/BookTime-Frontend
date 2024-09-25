@@ -3,7 +3,6 @@ import { useBooksContext } from '../hooks/useBooksContext';
 import { useAuthContext } from '../hooks/useAuthContext';
 import { Link } from 'react-router-dom';
 
-
 export const BookDetails = ({ book }) => {
 
   const { user } = useAuthContext();
@@ -26,7 +25,6 @@ export const BookDetails = ({ book }) => {
 
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem('token'));
-
 
     const fetchCover = async () => {
       if (book.cover) {
@@ -158,7 +156,6 @@ export const BookDetails = ({ book }) => {
       setError('No user!');
       return;
     }
-
 
     const updatedBook = {
       title,

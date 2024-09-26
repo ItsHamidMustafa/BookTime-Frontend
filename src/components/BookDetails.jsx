@@ -29,7 +29,7 @@ export const BookDetails = ({ book }) => {
     const fetchCover = async () => {
       if (book.cover) {
         try {
-          const response = await fetch(`/${book.cover}`, {
+          const response = await fetch(`/api/${book.cover}`, {
             method: 'GET',
             headers: { 'Authorization': `Bearer ${token}` }
           });

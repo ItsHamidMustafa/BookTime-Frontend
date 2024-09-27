@@ -69,7 +69,7 @@ export const BookForm = () => {
             formData.append('id', user._id);
 
             try {
-                const response = await fetch('/api/upload', {
+                const response = await fetch('/api/uploader/cover', {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -95,7 +95,7 @@ export const BookForm = () => {
             formData.append('pdfFile', pdfFile);
 
             try {
-                const response = await fetch('/api/upload-pdf', {
+                const response = await fetch('/api/uploader/pdf', {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${token}`

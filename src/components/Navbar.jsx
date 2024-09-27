@@ -57,7 +57,7 @@ export const Navbar = () => {
                     </div>
                 )}
                 {!user && (
-                    <div className='login-signup-container'>
+                    <div className={`login-signup-container ${menuOpen ? 'hidden' : ''}`}>
                         <Link to='/login'>Login</Link>
                         <Link to='/signup'>Signup</Link>
                     </div>

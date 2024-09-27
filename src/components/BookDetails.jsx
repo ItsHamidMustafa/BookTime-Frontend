@@ -29,7 +29,7 @@ export const BookDetails = ({ book }) => {
     const fetchCover = async () => {
       if (book.cover) {
         try {
-          const response = await fetch(`/api/${book.cover}`, {
+          const response = await fetch(`/api/uploader/covers/${book.cover}`, {
             method: 'GET',
             headers: { 'Authorization': `Bearer ${token}` }
           });
@@ -51,7 +51,7 @@ export const BookDetails = ({ book }) => {
     const fetchPdfFile = async () => {
       if (book.pdfFile) {
         try {
-          const response = await fetch(`/pdf-files/${book.pdfFile}`, {
+          const response = await fetch(`api/uploader/pdf-files/${book.pdfFile}`, {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`
@@ -112,7 +112,7 @@ export const BookDetails = ({ book }) => {
     const json = await response.json();
 
     if (response.ok) {
-      dispatch({ type: 'DELETE_BOOK', payload: json })
+      dispatch({ type: 'DELETE_BOOK', payload: json });
     }
 
   }

@@ -12,7 +12,7 @@ export const Search = () => {
         setError('');
 
         if (!query) {
-            setError('Type something to search');
+            setError('Please enter a search query.');
             return;
         }
 
@@ -21,7 +21,7 @@ export const Search = () => {
 
             const token = JSON.parse(localStorage.getItem('token'));
 
-            const logResponse = await fetch(`/api/log`, {
+            const logResponse = await fetch(`/api/search/log`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -32,14 +32,8 @@ export const Search = () => {
 
             const logData = await logResponse.json();
 
-            if (logResponse.ok) {
-                console.log(logData);
-            } else {
-                console.log(logResponse);
-            }
 
-
-            const response = await fetch(`/api/search?query=${query}`);
+            const response = await fetch(`/api/search/query?query=${query}`);
             const data = await response.json();
             setResults(data);
             if (data.length === 0) {
